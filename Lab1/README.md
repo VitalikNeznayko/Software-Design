@@ -1,7 +1,7 @@
 # Принципи програмування в проєкті
 
 ## DRY (Don't Repeat Yourself)
-+ В класі [Warehouse](./ConsoleApp1/ClassLibrary/Warehouse.cs) було використано метод [GetProducts()](./ConsoleApp1/ClassLibrary/Warehouse.cs#L17-L20), , який дозволяє отримати список продуктів і таким чином уникнути повторення коду в інших частинах програми. Наприклад, клас [Reporting](./ConsoleApp1/ClassLibrary/Reporting.cs), методи [GenerateInventoryReport](./ConsoleApp1/ClassLibrary/Reporting.cs#L17-L24), [GenerateCategoryReport](./ConsoleApp1/ClassLibrary/Reporting.cs#L26-L42) та [GenerateTotalValueReport](./ConsoleApp1/ClassLibrary/Reporting.cs#L44-L56), які використовують GetProducts().
++ В класі [Warehouse](./ConsoleApp1/ClassLibrary/Warehouse.cs) було використано метод [GetProducts()](./ConsoleApp1/ClassLibrary/Warehouse.cs#L17-L20), , який дозволяє отримати список продуктів і таким чином уникнути повторення коду в інших частинах програми. Наприклад, в класі [Reporting](./ConsoleApp1/ClassLibrary/Reporting.cs) методи [GenerateInventoryReport](./ConsoleApp1/ClassLibrary/Reporting.cs#L17-L24), [GenerateCategoryReport](./ConsoleApp1/ClassLibrary/Reporting.cs#L26-L42) та [GenerateTotalValueReport](./ConsoleApp1/ClassLibrary/Reporting.cs#L44-L56) використовують GetProducts().
 + В класі [Money](./ConsoleApp1/ClassLibrary/Money.cs) метод [ConvertTo()](./ConsoleApp1/ClassLibrary/Money.cs#L48-L56) дозволяє уникнути дублювання логіки конвертації в різних місцях коду.
 
 ## KISS (Keep It Simple, Stupid)
