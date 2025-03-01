@@ -5,7 +5,7 @@
 + В класі [Money](./ConsoleApp1/ClassLibrary/Money.cs) метод [ConvertTo()](./ConsoleApp1/ClassLibrary/Money.cs#L48-L56) дозволяє уникнути дублювання логіки конвертації в різних місцях коду.
 
 ## KISS (Keep It Simple, Stupid)
-+ Код організований зрозуміло: кожен клас виконує окрему відповідальність.
++ В коді кожен клас виконує окрему відповідальність.
 + Конвертація валют реалізована через [Dictionary<CurrencyType, decimal>](./ConsoleApp1/ClassLibrary/Money.cs#L22-L27), що зменшує кількість умов у коді.
   
 ## SOLID
@@ -13,7 +13,7 @@
 + Кожен клас виконує чітку функцію: [Warehouse](./ConsoleApp1/ClassLibrary/Warehouse.cs) відповідає за зберігання та управління продуктами, [Reporting](./ConsoleApp1/ClassLibrary/Reporting.cs) генерує звіти, [Product](./ConsoleApp1/ClassLibrary/Product.cs) представляє продукт і його дані, а [Money](./ConsoleApp1/ClassLibrary/Money.cs) керує фінансами та конвертацією.
 ### O — Open/Closed Principle (OCP)
 + Категорії реалізовані через enum, тому додавання нових товарів не вимагає зміни логіки класу [Product](./ConsoleApp1/ClassLibrary/Product.cs) або [Warehouse](./ConsoleApp1/ClassLibrary/Warehouse.cs).
-+ Валюти реалізовані через enum, тому клас [Money](./ConsoleApp1/ClassLibrary/Money.cs) ідтримує їх розширення без змін у своєму коді.
++ Валюти також реалізовані через enum, тому клас [Money](./ConsoleApp1/ClassLibrary/Money.cs) підтримує їх розширення без змін у своєму коді.
 ### D — Dependency Inversion Principle (DIP)
 + Клас [Reporting](./ConsoleApp1/ClassLibrary/Reporting.cs) залежить від [Warehouse](./ConsoleApp1/ClassLibrary/Warehouse.cs), але передається через конструктор, що дозволяє легко замінити реалізацію класу Warehouse.
 
