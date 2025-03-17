@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace InterfaceLibrary
 {
-    public interface IBrandFactory
+    public interface ITablet
     {
-        IDevice CreateLaptop();
-        IDevice CreateTablet();
-        IDevice CreateSmartphone();
+        void DisplayInfo();
     }
 }

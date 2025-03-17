@@ -6,7 +6,7 @@ class Program
     static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        IBrandFactory[] factories = { new IProneFactory(), new KiaomiFactory(), new BalaxyFactory() };
+        IDeviceFactory[] factories = { new IProneFactory(), new KiaomiFactory(), new BalaxyFactory() };
 
         foreach (var factory in factories)
         {
@@ -14,9 +14,9 @@ class Program
             var tablet = factory.CreateTablet();
             var smartphone = factory.CreateSmartphone();
 
-            laptop.ShowInfo();
-            tablet.ShowInfo();
-            smartphone.ShowInfo();
+            laptop.DisplayInfo();
+            tablet.DisplayInfo();
+            smartphone.DisplayInfo();
 
             Console.WriteLine();
         }

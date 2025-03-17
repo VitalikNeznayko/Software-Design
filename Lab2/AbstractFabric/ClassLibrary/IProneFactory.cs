@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class IProneFactory : IBrandFactory
+    public class IProneFactory : IDeviceFactory
     {
-        public IDevice CreateLaptop()
+        public ILaptop CreateLaptop()
         {
-            return new Laptop("IProne");
+            return new IProneLaptop();
         }
-        public IDevice CreateTablet()
+
+        public ITablet CreateTablet()
         {
-            return new Tablet("IProne");
+            return new IProneTablet();
         }
-        public IDevice CreateSmartphone()
+
+        public ISmartphone CreateSmartphone()
         {
-            return new Smartphone("IProne");
+            return new IProneSmartphone();
         }
     }
 }

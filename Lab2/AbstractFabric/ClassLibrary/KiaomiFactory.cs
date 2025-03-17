@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class KiaomiFactory : IBrandFactory
+    public class KiaomiFactory : IDeviceFactory
     {
-        public IDevice CreateLaptop()
+        public ILaptop CreateLaptop()
         {
-            return new Laptop("Kiaomi");
+            return new KiaomiLaptop();
         }
-        public IDevice CreateTablet()
+
+        public ITablet CreateTablet()
         {
-            return new Tablet("Kiaomi");
+            return new KiaomiTablet();
         }
-        public IDevice CreateSmartphone()
+
+        public ISmartphone CreateSmartphone()
         {
-            return new Smartphone("Kiaomi");
+            return new KiaomiSmartphone();
         }
     }
 }
