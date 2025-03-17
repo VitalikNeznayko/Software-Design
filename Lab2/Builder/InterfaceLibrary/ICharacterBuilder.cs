@@ -8,9 +8,9 @@
         ICharacterBuilder SetEyeColor(string eyeColor);
         ICharacterBuilder SetClothing(string clothing);
         ICharacterBuilder SetInventory(string inventory);
-        ICharacterBuilder SetAlignment(string alignment); // Для EnemyBuilder: добро або зло
-        ICharacterBuilder AddGoodDeed(string goodDeed); // Додатковий метод для добрих вчинків
-        ICharacterBuilder AddEvilDeed(string evilDeed); // Додатковий метод для злих вчинків
+        ICharacterBuilder SetAlignment(string alignment); 
+        ICharacterBuilder AddGoodDeed(string goodDeed); 
+        ICharacterBuilder AddEvilDeed(string evilDeed); 
         Character Build();
     }
 }
