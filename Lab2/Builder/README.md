@@ -11,7 +11,7 @@
 
 **Інтерфейс [ICharacterBuilder](Builder/ClassLibrary/ICharacterBuilder.cs)**  
 - Визначає методи для покрокового створення персонажа з текучим інтерфейсом:
- - `SetName()`, `SetStatus()`, `SetHeight()`, `SetBuild()`, `SetHairColor()`, `SetEyeColor()`, `SetArmor()`, `SetInventory()`, `SetWeapon()`, `SetAlignment`.
+ - `SetName()`, `SetStatus()`, `SetHeight()`, `SetBuild()`, `SetHairColor()`, `SetEyeColor()`, `SetArmor()`, `SetInventory()`, `SetWeapon()`, `SetAlignment()`.
  - `AddGoodDeed()`, `AddEvilDeed()` — для додавання елементів до списків.
  - `Build()` — повертає готовий об’єкт `Character`.
 
