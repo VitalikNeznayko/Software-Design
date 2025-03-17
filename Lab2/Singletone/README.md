@@ -1,7 +1,7 @@
 # Шаблон "Одинак"
 
 ## Структура проекту
-**Клас [Authenticator](Singletone/Singletone/Program.cs#L3C1-L25C2)
+**Клас [Authenticator](Singletone/Singletone/Program.cs#L3C1-L25C2)**
 - Використано модифікатор `sealed`, що забороняє успадкування.
 - Містить:
   - Приватне статичне поле `_instance` для збереження єдиного екземпляра.
