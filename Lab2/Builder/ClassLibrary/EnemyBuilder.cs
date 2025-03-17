@@ -61,11 +61,6 @@ namespace ClassLibrary
             return this;
         }
 
-        public Character Build()
-        {
-            return character;
-        }
-
         public ICharacterBuilder SetAlignment(string alignment = "Зло")
         {
             character.Alignment = alignment;
@@ -81,6 +76,10 @@ namespace ClassLibrary
         {
             character.EvilDeeds.Add(evilDeed);
             return this;
+        }
+        public Character Build()
+        {
+            return character;
         }
     }
 }
