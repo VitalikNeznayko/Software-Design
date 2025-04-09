@@ -7,7 +7,7 @@
 
 2. Лист [LightTextNode](./ClassLibrary/LightTextNode.cs):
     - Представляє текстовий вузол у HTML
-    - Конструктор [LightTextNode(string text)]() – задає текст
+    - Конструктор [LightTextNode(string text)](./ClassLibrary/LightTextNode.cs#L7-L10) – задає текст
 
 3. Композит [LightElementNode](./ClassLibrary/LightElementNode.cs):
     - Представляє HTML-елемент, який може містити інші вузли
