@@ -1,6 +1,6 @@
 # Патерн "Ланцюжок відповідальності"
 
-## Структура
+## Структура проєкту
 
 - **[SupportHandler](/Lab4/Chain%20of%20Responsibility/ClassLibrary/SupportHandler.cs)** – базовий клас для всіх обробників, реалізує логіку передачі запиту далі, якщо поточний обробник не може його обробити.
 - **[DeviceSupportHandler](/Lab4/Chain%20of%20Responsibility/ClassLibrary/DeviceSupportHandler.cs)** – обробляє технічні проблеми, пов’язані з пристроями.
