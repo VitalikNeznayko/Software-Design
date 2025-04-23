@@ -22,5 +22,5 @@
   - Визначає методи для запитів на посадку/зліт і реєстрацію літаків/смуг.
 
 ## Реалізація патерну
-- Посередник (CommandCentre) відповідає за координацію дій між літаками ([Aircraft](/Lab4/Intermediary/ClassLibrary/Aircraft.cs)) і смугами ([Runway](/Lab4/Intermediary/ClassLibrary/Runway.cs)).
-- Літаки не взаємодіють зі смугами напряму — вони звертаються до посередника, який вирішує, яка смуга вільна.
+1. Посередник (CommandCentre) відповідає за координацію дій між літаками ([Aircraft](/Lab4/Intermediary/ClassLibrary/Aircraft.cs)) і смугами ([Runway](/Lab4/Intermediary/ClassLibrary/Runway.cs)).
+2. Літаки не взаємодіють зі смугами напряму — вони звертаються до посередника, який вирішує, яка смуга вільна.
