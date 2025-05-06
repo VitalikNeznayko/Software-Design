@@ -3,6 +3,7 @@ public class Program
 {
     public static void Main()
     {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
         var div = new LightElementNode("div", DisplayType.Block, TagType.Pair);
         div.AddClass("container");
 
@@ -16,7 +17,19 @@ public class Program
         div.AddChild(h1);
         div.AddChild(p);
 
-        Console.WriteLine();
-        Console.WriteLine(div.OuterHTML);
+        Console.WriteLine("Ітератор для обоходу в глибину");
+        IIterator iterator = new DepthIterator(div);
+        while (iterator.HasNext())
+        {
+            LightNode node = iterator.Next();
+            Console.WriteLine(node.OuterHTML);
+        }
+        Console.WriteLine("\nІтератор для обоходу в ширину");
+        IIterator iterator1 = new BreadthIterator(div);
+        while (iterator1.HasNext())
+        {
+            LightNode node = iterator1.Next();
+            Console.WriteLine(node.OuterHTML);
+        }
     }
 }
