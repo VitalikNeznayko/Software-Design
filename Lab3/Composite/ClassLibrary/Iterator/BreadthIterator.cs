@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace ClassLibrary
+namespace ClassLibrary.Iterator
 {
     public class BreadthIterator : IIterator
     {
