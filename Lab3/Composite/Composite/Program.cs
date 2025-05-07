@@ -1,6 +1,7 @@
 ﻿using ClassLibrary;
 using ClassLibrary.Iterator;
 using ClassLibrary.Command;
+using ClassLibrary.State;
 public class Program
 {
     public static void Iterator(LightElementNode div, IIterator iterator)
@@ -34,14 +35,21 @@ public class Program
 
         Console.WriteLine(div.OuterHTML);
 
+        Console.WriteLine();
+        div.Render();
+        div.SetState(new HiddenState());
+        div.Render();
+        div.SetState(new DisabledState());
+        div.Render();
+
         invoker.UndoLastCommand();
         Console.WriteLine("\nВидалимо останню команду:");
         Console.WriteLine(div.OuterHTML);
 
-        //Console.WriteLine("Ітератор для обоходу в глибину");
-        //Iterator(div, new DepthIterator(div));
-        //Console.WriteLine("\nІтератор для обоходу в ширину");
-        //Iterator(div, new BreadthIterator(div));
+        Console.WriteLine("\nІтератор для обоходу в глибину");
+        Iterator(div, new DepthIterator(div));
+        Console.WriteLine("\nІтератор для обоходу в ширину");
+        Iterator(div, new BreadthIterator(div));
 
 
     }
