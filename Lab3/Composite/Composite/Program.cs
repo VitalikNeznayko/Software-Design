@@ -2,6 +2,7 @@
 using ClassLibrary.Iterator;
 using ClassLibrary.Command;
 using ClassLibrary.State;
+using ClassLibrary.TemplateMethod;
 public class Program
 {
     public static void Iterator(LightElementNode div, IIterator iterator)
@@ -52,5 +53,8 @@ public class Program
         Iterator(div, new BreadthIterator(div));
 
 
+        Console.WriteLine("\n\nЖиттєвий цикл елемента\n");
+        LightElementLifecycle element = new LightElementLifecycle();
+        element.Render();
     }
 }
