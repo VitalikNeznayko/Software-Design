@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using ClassLibrary.State;
+using System.Text;
 
 namespace ClassLibrary
 {
@@ -21,6 +22,7 @@ namespace ClassLibrary
         public List<string> CssClasses { get; }
         public List<LightNode> Children { get; }
 
+        private IState _state;
         public LightElementNode(string tagName, DisplayType display, TagType tagType)
         {
             TagName = tagName;
@@ -28,6 +30,16 @@ namespace ClassLibrary
             TagType = tagType;
             CssClasses = new List<string>();
             Children = new List<LightNode>();
+            _state = new VisibleState();
+        }
+        public void SetState(IState state)
+        {
+            _state = state;
+        }
+
+        public void Render()
+        {
+            _state.Render(this);
         }
 
         public void AddChild(LightNode node)
