@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ClassLibrary
+namespace ClassLibrary.Iterator
 {
     public class DepthIterator : IIterator
     {
@@ -22,6 +22,7 @@ namespace ClassLibrary
             if (!HasNext())
             {
                 Console.WriteLine("No more elements");
+                return null;
             }
 
             LightNode node = stack.Pop();
