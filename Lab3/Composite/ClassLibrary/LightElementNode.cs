@@ -1,5 +1,6 @@
 ﻿using ClassLibrary.State;
 using System.Text;
+using ClassLibrary.Visitor;
 
 namespace ClassLibrary
 {
@@ -63,6 +64,11 @@ namespace ClassLibrary
                     return $"<{TagName}{classAttr}/>";
                 return $"<{TagName}{classAttr}>{InnerHTML}</{TagName}>";
             }
+        }
+
+        public override void Accept(ILightNodeVisitor visitor)
+        {
+            visitor.VisitElementNode(this);
         }
     }
 }

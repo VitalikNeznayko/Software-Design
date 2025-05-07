@@ -1,4 +1,5 @@
-﻿namespace ClassLibrary
+﻿using ClassLibrary.Visitor;
+namespace ClassLibrary
 {
     public class LightTextNode : LightNode
     {
@@ -12,6 +13,11 @@
         public override string OuterHTML => text;
 
         public override string InnerHTML => text;
+
+        public override void Accept(ILightNodeVisitor visitor)
+        {
+            visitor.VisitTextNode(this);
+        }
 
     }
 
