@@ -3,6 +3,7 @@ using ClassLibrary.Iterator;
 using ClassLibrary.Command;
 using ClassLibrary.State;
 using ClassLibrary.TemplateMethod;
+using ClassLibrary.Visitor;
 public class Program
 {
     public static void Iterator(LightElementNode div, IIterator iterator)
@@ -53,8 +54,15 @@ public class Program
         Iterator(div, new BreadthIterator(div));
 
 
-        Console.WriteLine("\n\nЖиттєвий цикл елемента\n");
+        Console.WriteLine("\nЖиттєвий цикл елемента\n");
         LightElementLifecycle element = new LightElementLifecycle();
         element.Render();
+
+        Console.WriteLine();
+        invoker.ExecuteCommand(addClassCommand);
+        invoker.ExecuteCommand(new AddClassCommand(h1, "header"));
+
+        var visitor = new HtmlPrinterVisitor();
+        div.Accept(visitor);
     }
 }
